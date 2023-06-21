@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:id="@+id/toolbar"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar"
+        android:layout_marginTop="100sp"
+        android:layout_marginStart="20sp"
+        android:layout_marginEnd="20sp"
+        android:id="@+id/urlLayout">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/urlET"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10sp"
+        android:layout_below="@id/urlLayout"
+        android:id="@+id/download"
+        android:text="Download"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="180sp"
+        android:layout_below="@id/download"
+        android:layout_marginStart="20sp"
+        android:layout_marginEnd="20sp"
+        android:id="@+id/thumbnail"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/thumbnail"
+        android:id="@+id/titleTV"
+        android:layout_marginStart="20sp"
+        android:layout_marginEnd="20sp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/titleTV"
+        android:layout_marginStart="20sp"
+        android:layout_marginEnd="20sp"
+        android:id="@+id/channelName"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/videoLength"
+        android:layout_below="@id/channelName"
+        android:layout_marginStart="20sp"
+        android:layout_marginEnd="20sp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/viewCount"
+        android:layout_below="@id/videoLength"
+        android:layout_marginStart="20sp"
+        android:layout_marginEnd="20sp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/viewCount"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:layout_marginTop="10sp"
+        android:id="@+id/recycler"/>
+
+</RelativeLayout>
