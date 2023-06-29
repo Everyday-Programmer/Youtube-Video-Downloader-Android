@@ -85,7 +85,7 @@ public class MainActivity extends AppCompatActivity {
                             }
                         });
                     }
-                }.extract(Objects.requireNonNull(editText.getText()).toString());
+                }.extract(Objects.requireNonNull(editText.getText()).toString(), false, false);
             }
         });
     }
